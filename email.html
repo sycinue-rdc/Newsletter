@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .base {
+            width: 450px;
+            padding: 0px 30px;
+            font-family:'Netflix Sans',Helvetica,Roboto,Segoe UI,sans-serif;
+            margin: auto;
+
+            .hero {
+                h1 {
+                    font-weight:700;
+                    font-size:36px;
+                    line-height:43px;
+                    letter-spacing:-1px;
+                    color:#232323;
+                    text-align: center;
+                }
+
+                h2 {
+                    font-weight:700;
+                }
+
+                h3 {
+                    font-weight:700;
+                    font-size: large;
+                    color:#232323;
+                    margin-bottom: -15px;
+                }
+
+                p {
+                    font-weight:400;
+                    font-size:16px;
+                    color:#232323;
+                }
+
+                img {
+                    height: 70px;
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                .details {
+                    border: solid rgba(0, 0, 0, 0.5) 1.5px;
+                    border-radius: 10px;
+                    padding: 0px 20px;
+
+                    ul {
+                        list-style-type: none;
+                        padding-left: 0;
+                        
+                        h4 {
+                            font-weight:700;
+                            font-size:14px;
+                            letter-spacing:-0.2px;
+                            color:#232323;
+                            margin: 0;
+                        }
+
+                        li {
+                            font-weight:400;
+                            font-size:16px;
+                            line-height:21px;
+                            color:#232323;
+                            padding-left:20px;
+                            padding-right:20px;
+                            padding-top:8px;
+                        }
+
+                        li#ID, li#email, li#pass {
+                            padding-top: 0;
+                        }
+                    }
+                }
+
+                hr {
+                    border: solid #232323 1px;
+                }
+
+                a.feedback {
+                    margin: auto;
+                    background-color: #800000;
+                    text-decoration: none;
+                    display: block;
+                    width: 100%;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    border: solid 1.5px #800000;
+                    border-radius: 5px;
+                    text-align: center;
+                    font-weight: 400;
+                    color: white;
+                }
+                a.feedback:hover {
+                    color: #800000;
+                    border: solid 1.5px #800000;
+                    background-color: white;
+                }
+            }
+
+            .footer{
+                .container {
+                    padding-top: 50px;
+                    display: flex;
+                    color: #232323bd;
+                    font-size: small;
+
+                    .left {
+                        width: 70px;
+                        img {
+                            height: 50px;
+                        }
+                    }
+                    .right {
+                        padding-left: 25px;
+
+                        a {
+                            color: #232323bd;
+                            font-size: medium;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    </style>
+
+    <div class="base">
+        <div class="hero">
+            <div class="container" style="padding: 20px 0;">
+                <img src="https://fcat.com.ph/wp-content/uploads/2020/07/fcat-logo-250x.png" alt="FCAT">
+                
+                <h1>Welcome to your FCAT Google Account!</h1>
+                
+                <p>Hi USER,<br><br>Your account has been updated successfully.</p>
+                
+                <div class="details">
+                    <h2>Accounts Details</h2>
+                    <ul>
+                        <li><h4>Request ID No.</h4></li>
+                        <li id="ID">GM####</li>
+                    </ul>
+                    <ul>
+                        <li><h4>Email</h4></li>
+                        <li id="email">sample@fcat.com.ph</li>
+                    </ul>
+                    <ul>
+                        <li><h4>Temporary Password</h4></li>
+                        <li id="pass">fcat1234</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <h3>Guidelines:</h3>
+            <p>After logging into your account, please change your password immediately.</p>
+    
+            <h3>Note:</h3>
+            <p>Please fill out this feedback form to notify us if your account has been successfully updated or created, or if you have any other problems.</p>
+    
+            <hr>
+    
+            <a href="#" class="feedback">Feedback Form</a>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="left">
+                    <img src="https://fcat.com.ph/wp-content/uploads/2020/07/fcat-logo-250x.png" alt="FCAT">
+                </div>
+                <div class="right">
+                    <a href="https://fcat.com.ph/privacy-policy-2/" class="footer" target="_blank">Privacy Policy</a>
+                    <br>
+                    <a href="https://fcat.com.ph/contact-us/" class="footer" target="_blank">Contact Us</a>
+    
+                    <p>
+                        <small>
+                            The content of this message is confidential. If you have received it by mistake, please inform us by an email reply and then delete the message. It is forbidden to copy, forward, or in any way reveal the contents of this message to anyone. The integrity and security of this email cannot be guaranteed over the Internet. Therefore, the sender will not be held liable for any damage caused by the message.
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
