@@ -1,0 +1,199 @@
+<!-- 
+
+Feedback Email Newsletter for (ITS) Email Notification
+Copyright (c) Dalumpines, Eunicys S.
+Date Developed : June 2024
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB Newsletter</title>
+
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/sycinue-rdc/online-assets/main/Email%20NewsLetter/logo_placeholder.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Style -->
+     <style>
+        .base {
+            background-color: #2D3036;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            width: 450px;
+            margin: auto;
+        }
+
+        .title {
+            color: #2daae9;
+            font-weight: 600;
+        }
+
+        .th {
+            color: #2daae9;
+        }
+
+        table {
+            text-wrap: pretty;
+        }
+            
+        table.header{
+            background: #24272C;
+            text-align: center;
+            width: 100%;
+            margin: auto;
+        }
+
+        table.header img {
+            height: 100px;
+        }
+
+        table.greet {
+            margin: auto;
+            width: 80%;
+            font-size: 20px;
+        }
+
+        table.hero {
+            margin: auto;
+            width: 80%;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.050);
+            border: solid rgba(255, 255, 255, 0.5) 1px;
+            border-left: solid 3px #2DAAE9;
+            border-bottom: solid 3px rgba(255, 255, 255, 0.7);
+        }
+
+        table.navlink {
+            width: 80%;
+            padding: 10px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.050);
+            border: solid rgba(255, 255, 255, 0.050) 1px;
+        }
+
+        .button {
+            display: inline-flex;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 0 30px;
+            text-align: center;
+            outline: none;
+            line-height: 35px;
+            height: 35px;
+            box-sizing: content-box;
+            border: none;
+            white-space: nowrap;
+            border-radius: 4px;
+            color: white;
+            text-decoration: none;
+            background: #2daae9;
+            background-color: #2daae9;
+        }
+
+        table.footer {
+            background: #24272C;
+            margin: auto;
+            width: 100%;
+            color: #A1A393;
+        }
+
+        table.footer img {
+            height: 40px;
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            margin: auto;
+        }
+
+        table.footer ul {
+            list-style-type: none;
+            padding-left: 0;
+            font-size: 10px;
+        }
+
+        table.smlfooter {
+            font-size: 12px;
+            width: 100%;
+            text-align: center;
+            background-color: black;
+        }
+     </style>
+
+     <!-- Table -->
+      <div class="base">
+            <!-- HEADER -->
+            <table class="header">
+                <td><img src="https://raw.githubusercontent.com/sycinue-rdc/online-assets/main/Email%20NewsLetter/graphics.jpg" alt="header"></td>
+            </table>
+
+             <br>
+
+            <!-- GREET -->
+            <table class="greet">
+                <td>Hello, I have a new job request!</td>
+            </table>
+
+            <br>
+
+            <!-- HERO -->
+            <table class="hero">
+                <tr>
+                    <td class="title">Request ID No.</td>
+                    <td>${reqid}</td>
+                </tr>
+                <tr>
+                    <td class="title">Department</td>
+                    <td>${department}</td>
+                </tr>
+                <tr>
+                    <td class="title">Task Description</td>
+                    <td>${description}</td>
+                </tr>
+                <tr>
+                    <td class="title">Purpose</td>
+                    <td>${purpose}</td>
+                </tr>
+                <tr>
+                    <td class="title">Deadline of Request</td>
+                    <td>${deadline}</td>
+                </tr>
+                <tr>
+                    <td class="title">Requested By</td>
+                    <td>${requestor}</td>
+                </tr>
+            </table>
+
+            <!-- LINK -->
+            <table class="navlink">
+                <tr>
+                    <td><a href="https://docs.google.com/spreadsheets/d/1NByKZRO7uN0eo8ckcMQ0EgE2YTcYynIN7mQ8H_mMzik/" class="button">Job Order</a></td>
+                </tr>
+            </table>
+
+            <br>
+
+            <!-- FOOTER -->
+             <table class="footer">
+                <td>
+                    <img src="https://raw.githubusercontent.com/sycinue-rdc/online-assets/main/Email%20NewsLetter/logo_placeholder.png" alt="logo">
+                </td>
+                <td>
+                    <ul>
+                        <li>Frontend Developer : <span class="th">Mr. Eunicys Dalumpines</span></li>
+                        <li>Backend Developer : <span class="th">Mr. Menard Dela Cruz</span></li>
+                        <li>Date Developed : June 2024</li>
+                    </ul>
+                </td>
+             </table>
+             <table class="smlfooter">
+                <td>
+                    <small>&copy; sycinue-rdc 2024</small>
+                </td>
+             </table>
+        </div>
+</body>
+</html>
