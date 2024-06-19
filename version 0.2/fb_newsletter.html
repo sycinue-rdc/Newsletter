@@ -19,15 +19,17 @@ Date Developed : June 2024
     <!-- Style -->
      <style>
         .base {
-            background-color: #2D3036;
+            /* background-color: #2D3036; */
+            background-color: #1a1a1a;
             color: white;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
             width: 450px;
             margin: auto;
+            border-radius: 20px;
         }
 
         .title {
-            color: #2daae9;
+            /* color: #2daae9; */
             font-weight: 600;
         }
 
@@ -41,6 +43,8 @@ Date Developed : June 2024
             
         table.header{
             background: #24272C;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
             text-align: center;
             width: 100%;
             margin: auto;
@@ -60,18 +64,29 @@ Date Developed : June 2024
             margin: auto;
             width: 80%;
             padding: 10px;
+            /* background-color: #1f3b4d; */
             background-color: rgba(255, 255, 255, 0.050);
             border: solid rgba(255, 255, 255, 0.5) 1px;
-            border-left: solid 3px #2DAAE9;
-            border-bottom: solid 3px rgba(255, 255, 255, 0.7);
+            /* border-left: solid 3px #2DAAE9; */
+            /* border-bottom: solid 3px rgba(255, 255, 255, 0.7); */
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom: solid 0px;
+            font-size: 14px;
         }
 
         table.navlink {
+            font-size: 14px;
             width: 80%;
             padding: 10px;
             margin: auto;
             background-color: rgba(255, 255, 255, 0.050);
-            border: solid rgba(255, 255, 255, 0.050) 1px;
+            /* background-color: #1f3b4d; */
+            /* border: solid rgba(255, 255, 255, 0.050) 1px; */
+            border: solid rgba(255, 255, 255, 0.5) 1px;
+            border-top: solid 0px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
 
         .button {
@@ -120,6 +135,8 @@ Date Developed : June 2024
             width: 100%;
             text-align: center;
             background-color: black;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
      </style>
 
@@ -142,35 +159,40 @@ Date Developed : June 2024
             <!-- HERO -->
             <table class="hero">
                 <tr>
-                    <td class="title">Request ID No.</td>
+                    <td class="title">Request ID:</td>
                     <td>${reqid}</td>
+
+                    <td class="title">Date:</td>
+                    <td>${daterequest}</td>
                 </tr>
                 <tr>
-                    <td class="title">Department</td>
+                    <td colspan="4"><hr style="border: 0;"></td>
+                </tr>
+                <tr>
+                    <td class="title">Department:</td>
                     <td>${department}</td>
                 </tr>
                 <tr>
-                    <td class="title">Task Description</td>
-                    <td>${description}</td>
-                </tr>
-                <tr>
-                    <td class="title">Purpose</td>
+                    <td class="title">Purpose:</td>
                     <td>${purpose}</td>
                 </tr>
                 <tr>
-                    <td class="title">Deadline of Request</td>
-                    <td>${deadline}</td>
+                    <td class="title">Date & Time:</td>
+                    <td>${datetime}</td>
                 </tr>
                 <tr>
-                    <td class="title">Requested By</td>
-                    <td>${requestor}</td>
+                    <td colspan="4"><hr style="border: 0;"></td>
                 </tr>
             </table>
 
             <!-- LINK -->
             <table class="navlink">
                 <tr>
-                    <td><a href="https://docs.google.com/spreadsheets/d/1NByKZRO7uN0eo8ckcMQ0EgE2YTcYynIN7mQ8H_mMzik/" class="button">Job Order</a></td>
+                    <td class="title">Requested By:</td>
+                    <td>${user}</td>
+
+                    <!-- Button -->
+                    <td style="text-align: right;"><a href="https://docs.google.com/spreadsheets/d/1NByKZRO7uN0eo8ckcMQ0EgE2YTcYynIN7mQ8H_mMzik/" class="button">View</a></td>
                 </tr>
             </table>
 
