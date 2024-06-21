@@ -1,6 +1,6 @@
 <!-- 
 
-Feedback Email Newsletter for (ITS) Email Notification
+New ID Email Newsletter for (ITS) Email Notification
 Copyright (c) Dalumpines, Eunicys S.
 Date Developed : June 2024
  
@@ -11,7 +11,7 @@ Date Developed : June 2024
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FB Newsletter</title>
+    <title>ID Newsletter</title>
 
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/sycinue-rdc/online-assets/main/Email%20NewsLetter/logo_placeholder.png" type="image/x-icon">
 </head>
@@ -33,6 +33,10 @@ Date Developed : June 2024
 
         .th {
             color: #2daae9;
+        }
+
+        .smltxt {
+            font-size: 16px;
         }
 
         table {
@@ -64,9 +68,8 @@ Date Developed : June 2024
             padding: 10px;
             background-color: rgba(255, 255, 255, 0.050);
             border: solid rgba(255, 255, 255, 0.5) 1px;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            border-bottom: solid 0px;
+            border-radius: 10px;
+            /* border-bottom: solid 0px; */
             font-size: 14px;
         }
 
@@ -87,7 +90,7 @@ Date Developed : June 2024
             padding: 5px 10px;
             font-size: 12px;
             font-weight: 700;
-            padding: 0 30px;
+            padding: 0 60px;
             text-align: center;
             outline: none;
             line-height: 35px;
@@ -100,6 +103,13 @@ Date Developed : June 2024
             text-decoration: none;
             background: #2daae9;
             background-color: #2daae9;
+        }
+
+        table.note {
+            margin: auto;
+            width: 80%;
+            
+            font-size: 12px;
         }
 
         table.footer {
@@ -137,14 +147,26 @@ Date Developed : June 2024
       <div class="base">
             <!-- HEADER -->
             <table class="header">
-                <td><img src="https://raw.githubusercontent.com/sycinue-rdc/online-assets/main/Email%20NewsLetter/graphics.jpg" alt="header"></td>
+                <td><img src="https://raw.githubusercontent.com/sycinue-rdc/online-assets/main/Email%20NewsLetter/Camera.png" alt="header"></td>
             </table>
 
              <br>
 
             <!-- GREET -->
             <table class="greet">
-                <td>Hello, I have a new job request!</td>
+                <td>Hello, ${lname}!</td>
+                <tr>
+                    <td><hr style="border: 0;"></td>
+                </tr>
+                <tr>
+                    <td class="smltxt">Please come to FCAT IT Office for your ID Pictorial scheduled on :</td>
+                </tr>
+                <!-- <tr>
+                    <td><hr style="border: 0;"></td>
+                </tr>
+                <tr>
+                    <th>Student Information</th>
+                </tr> -->
             </table>
 
             <br>
@@ -152,40 +174,28 @@ Date Developed : June 2024
             <!-- HERO -->
             <table class="hero">
                 <tr>
-                    <td class="title">Request ID:</td>
-                    <td>${reqid}</td>
-
                     <td class="title">Date:</td>
-                    <td>${daterequest}</td>
+                    <td>${schedate}</td>
                 </tr>
                 <tr>
-                    <td colspan="4"><hr style="border: 0;"></td>
-                </tr>
-                <tr>
-                    <td class="title">Department:</td>
-                    <td>${department}</td>
-                </tr>
-                <tr>
-                    <td class="title">Purpose:</td>
-                    <td>${purpose}</td>
-                </tr>
-                <tr>
-                    <td class="title">Date & Time:</td>
-                    <td>${datetime}</td>
-                </tr>
-                <tr>
-                    <td colspan="4"><hr style="border: 0;"></td>
+                    <td class="title">Time:</td>
+                    <td>${schedtime}</td>
                 </tr>
             </table>
 
-            <!-- LINK -->
-            <table class="navlink">
-                <tr>
-                    <td class="title">Requested By:</td>
-                    <td>${user}</td>
+            <br>
 
-                    <!-- Button -->
-                    <td style="text-align: right;"><a href="https://docs.google.com/spreadsheets/d/1NByKZRO7uN0eo8ckcMQ0EgE2YTcYynIN7mQ8H_mMzik/" class="button">View</a></td>
+            <table class="note">
+                <tr>
+                    <td>Go to FCAT MAIN at 3rd Floor IT Office, Present this stab!</td>
+                </tr>
+                <tr>
+                    <td><hr style="border: 0;"></td>
+                </tr>
+                <tr>
+                    <td style="width: 100%; text-align: center;">
+                        <a href="#" class="button">STAB</a>
+                    </td>
                 </tr>
             </table>
 

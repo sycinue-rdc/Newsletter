@@ -1,6 +1,6 @@
 <!-- 
 
-Feedback Email Newsletter for (ITS) Email Notification
+New ID Email Newsletter for (ITS) Email Notification
 Copyright (c) Dalumpines, Eunicys S.
 Date Developed : June 2024
  
@@ -11,7 +11,7 @@ Date Developed : June 2024
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FB Newsletter</title>
+    <title>ID Newsletter</title>
 
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/sycinue-rdc/online-assets/main/Email%20NewsLetter/logo_placeholder.png" type="image/x-icon">
 </head>
@@ -33,6 +33,10 @@ Date Developed : June 2024
 
         .th {
             color: #2daae9;
+        }
+
+        .smltxt {
+            font-size: 16px;
         }
 
         table {
@@ -64,10 +68,64 @@ Date Developed : June 2024
             padding: 10px;
             background-color: rgba(255, 255, 255, 0.050);
             border: solid rgba(255, 255, 255, 0.5) 1px;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            border-bottom: solid 0px;
+            border-radius: 10px;
+            /* border-bottom: solid 0px; */
             font-size: 14px;
+        }
+
+        .idnumber {
+            width: 280px;
+            z-index: 1;
+            position: absolute;
+            color: black;
+            margin-top: -440px;
+            margin-left: 114px;
+            text-align: center;
+        }
+
+        .idn-num {
+            font-size: 12px;
+            margin: 0;
+            font-weight: 800;
+        }
+
+        .idn-text {
+            margin: 0;
+            font-size: 10px;
+        }
+
+        .pic {
+
+            position: absolute;
+            height: 180px;
+            margin-top: -400px;
+            margin-left: 162.5px;
+        }
+
+        .sign {
+            position: absolute;
+            height: 35px;
+            margin-top: -215px;
+            margin-left: 225px;
+        }
+
+        .info {
+            width: 280px;
+            z-index: 1;
+            position: absolute;
+            color: black;
+            margin-top: -185px;
+            margin-left: 114px;
+            text-align: center;
+        }
+
+        .id-info {
+            font-weight: 800;
+        }
+
+        .id-info-label {
+            font-size: 10px;
+            
         }
 
         table.navlink {
@@ -87,7 +145,7 @@ Date Developed : June 2024
             padding: 5px 10px;
             font-size: 12px;
             font-weight: 700;
-            padding: 0 30px;
+            padding: 0 60px;
             text-align: center;
             outline: none;
             line-height: 35px;
@@ -100,6 +158,13 @@ Date Developed : June 2024
             text-decoration: none;
             background: #2daae9;
             background-color: #2daae9;
+        }
+
+        table.note {
+            margin: auto;
+            width: 80%;
+            
+            font-size: 12px;
         }
 
         table.footer {
@@ -131,20 +196,24 @@ Date Developed : June 2024
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
         }
+
+        .id {
+            width: 100%;
+        }
      </style>
 
      <!-- Table -->
       <div class="base">
             <!-- HEADER -->
             <table class="header">
-                <td><img src="https://raw.githubusercontent.com/sycinue-rdc/online-assets/main/Email%20NewsLetter/graphics.jpg" alt="header"></td>
+                <td><img src="https://raw.githubusercontent.com/sycinue-rdc/online-assets/main/Email%20NewsLetter/Camera.png" alt="header"></td>
             </table>
 
              <br>
 
             <!-- GREET -->
             <table class="greet">
-                <td>Hello, I have a new job request!</td>
+
             </table>
 
             <br>
@@ -152,40 +221,60 @@ Date Developed : June 2024
             <!-- HERO -->
             <table class="hero">
                 <tr>
-                    <td class="title">Request ID:</td>
-                    <td>${reqid}</td>
-
-                    <td class="title">Date:</td>
-                    <td>${daterequest}</td>
-                </tr>
-                <tr>
-                    <td colspan="4"><hr style="border: 0;"></td>
-                </tr>
-                <tr>
-                    <td class="title">Department:</td>
-                    <td>${department}</td>
-                </tr>
-                <tr>
-                    <td class="title">Purpose:</td>
-                    <td>${purpose}</td>
-                </tr>
-                <tr>
-                    <td class="title">Date & Time:</td>
-                    <td>${datetime}</td>
-                </tr>
-                <tr>
-                    <td colspan="4"><hr style="border: 0;"></td>
+                    <td>
+                        <img class="id" src="https://raw.githubusercontent.com/sycinue-rdc/online-assets/main/Email%20NewsLetter/id-design-0.jpg" alt="">
+                    </td>
                 </tr>
             </table>
 
-            <!-- LINK -->
-            <table class="navlink">
+            <!-- LABELS -->
+             <table class="idnumber">
                 <tr>
-                    <td class="title">Requested By:</td>
-                    <td>${user}</td>
+                    <td class="idn-num">${idnumber}</td>
+                </tr>
+                <tr>
+                    <td class="idn-text">Student No.</td>
+                </tr>
+             </table>
 
-                    <!-- Button -->
-                    <td style="text-align: right;"><a href="https://docs.google.com/spreadsheets/d/1NByKZRO7uN0eo8ckcMQ0EgE2YTcYynIN7mQ8H_mMzik/" class="button">View</a></td>
+            <!-- Picture -->
+            <img class="pic" src="https://raw.githubusercontent.com/sycinue-rdc/online-assets/main/Email%20NewsLetter/avatar.png" alt="Formal Picture">
+            <img class="sign" src="https://raw.githubusercontent.com/sycinue-rdc/online-assets/main/Email%20NewsLetter/signature.png" alt="Signature">
+
+            <table class="info">
+                <tr>
+                    <td class="id-info">${idname}</td>
+                </tr>
+                <tr>
+                    <td class="id-info-label">Student Name</td>
+                </tr>
+                <tr>
+                    <td class="id-info">${idaddress}</td>
+                </tr>
+                <tr>
+                    <td class="id-info-label">Address</td>
+                </tr>
+                <tr>
+                    <td class="id-info">${idcourse}</td>
+                </tr>
+                <tr>
+                    <td class="id-info-label">Course</td>
+                </tr>
+            </table>
+
+            <br>
+
+            <table class="note">
+                <tr>
+                    <td>Thank you for your cooperation, your ID has been printed.</td>
+                </tr>
+                <tr>
+                    <td><hr style="border: 0;"></td>
+                </tr>
+                <tr>
+                    <td style="width: 100%; text-align: center;">
+                        <a href="#" class="button">Leave Any Feedback</a>
+                    </td>
                 </tr>
             </table>
 
